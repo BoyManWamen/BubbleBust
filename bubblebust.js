@@ -11,8 +11,8 @@ let level = 1;
 level_document.textContent = "LEVEL " + level;
 
 function getRandomPosition(element) {
-	let x = document.body.offsetHeight;
-	let y = document.body.offsetWidth;
+	let x = document.body.offsetHeight-element.clientWidth;
+	let y = document.body.offsetWidth-element.clientWidth;
 	let randomX = Math.floor(Math.random()*x);
 	let randomY = Math.floor(Math.random()*y);
 	return [randomX,randomY];
