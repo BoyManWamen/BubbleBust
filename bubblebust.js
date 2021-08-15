@@ -11,10 +11,10 @@ let level = 1;
 level_document.textContent = "LEVEL " + level;
 
 function getRandomPosition(element) {
-	let x = document.documentElement.clientHeight;
-	let y = document.documentElement.clientWidth;
-	let randomX = Math.floor(Math.random()*x*90);
-	let randomY = Math.floor(Math.random()*y*90);
+	let x = document.body.offsetHeight;
+	let y = document.body.offsetWidth;
+	let randomX = Math.floor(Math.random()*x);
+	let randomY = Math.floor(Math.random()*y);
 	return [randomX,randomY];
 }
 
